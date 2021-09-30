@@ -42,6 +42,7 @@ namespace Shotgun
             this.labelComputerbullet = new System.Windows.Forms.Label();
             this.buttonShotgun = new System.Windows.Forms.Button();
             this.pictureBoxGameOver = new System.Windows.Forms.PictureBox();
+            this.buttonRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameOver)).BeginInit();
@@ -86,6 +87,7 @@ namespace Shotgun
             this.buttonLoad.TabIndex = 4;
             this.buttonLoad.Text = "Load";
             this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // textBoxComputer
             // 
@@ -106,6 +108,7 @@ namespace Shotgun
             this.buttonShoot.TabIndex = 6;
             this.buttonShoot.Text = "Shoot";
             this.buttonShoot.UseVisualStyleBackColor = true;
+            this.buttonShoot.Click += new System.EventHandler(this.buttonShoot_Click);
             // 
             // buttonBlock
             // 
@@ -116,6 +119,7 @@ namespace Shotgun
             this.buttonBlock.TabIndex = 7;
             this.buttonBlock.Text = "Block";
             this.buttonBlock.UseVisualStyleBackColor = true;
+            this.buttonBlock.Click += new System.EventHandler(this.buttonBlock_Click);
             // 
             // labelComputer
             // 
@@ -166,6 +170,7 @@ namespace Shotgun
             this.buttonShotgun.TabIndex = 13;
             this.buttonShotgun.Text = "Shotgun";
             this.buttonShotgun.UseVisualStyleBackColor = true;
+            this.buttonShotgun.Click += new System.EventHandler(this.buttonShotgun_Click);
             // 
             // pictureBoxGameOver
             // 
@@ -179,11 +184,24 @@ namespace Shotgun
             this.pictureBoxGameOver.TabStop = false;
             this.pictureBoxGameOver.Visible = false;
             // 
+            // buttonRestart
+            // 
+            this.buttonRestart.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRestart.Location = new System.Drawing.Point(654, 515);
+            this.buttonRestart.Name = "buttonRestart";
+            this.buttonRestart.Size = new System.Drawing.Size(184, 46);
+            this.buttonRestart.TabIndex = 15;
+            this.buttonRestart.Text = "Restart Game";
+            this.buttonRestart.UseVisualStyleBackColor = true;
+            this.buttonRestart.Visible = false;
+            this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1512, 1076);
+            this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.pictureBoxGameOver);
             this.Controls.Add(this.buttonShotgun);
             this.Controls.Add(this.labelComputerbullet);
@@ -199,7 +217,6 @@ namespace Shotgun
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameOver)).EndInit();
@@ -223,6 +240,7 @@ namespace Shotgun
         private System.Windows.Forms.Label labelComputerbullet;
         private System.Windows.Forms.Button buttonShotgun;
         private System.Windows.Forms.PictureBox pictureBoxGameOver;
+        private System.Windows.Forms.Button buttonRestart;
     }
 }
 

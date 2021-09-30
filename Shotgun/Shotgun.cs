@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace Shotgun
 {
@@ -8,11 +6,17 @@ namespace Shotgun
     {
         //Medlemsvariabler
         private Computer computer = new Computer();
+
         private int amountShots = 0;
         private bool gameIsOver = false;
         private state playerMove = state.none;
         private string result = "";
-        
+
+        public Shotgun()
+        {
+        }
+
+
         //Enum typ
         private enum state
         {
@@ -37,12 +41,17 @@ namespace Shotgun
                     }
                     else if (computerMove == Computer.state.load)
                     {
-                        result = "Both players loading!";
+                        result = "Both player and computer are loading!";
 
                     }
                     else if (computerMove == Computer.state.block)
                     {
                         result = "Player was loading while computer was blocking";
+                    }
+                    else if (computerMove == Computer.state.shotgun)
+                    {
+                        result = "Computer shot Shotgun. Player is killed.";
+                        gameIsOver = true;
                     }
                     break;
                 case state.block:
@@ -57,6 +66,11 @@ namespace Shotgun
                     else if (computerMove == Computer.state.block)
                     {
                         result = "Both players were blocking.";
+                    }
+                    else if (computerMove == Computer.state.shotgun)
+                    {
+                        result = "Computer shot Shotgun. Player is killed.";
+                        gameIsOver = true;
                     }
                     break;
                 case state.shoot:
@@ -73,6 +87,11 @@ namespace Shotgun
                     {
                         result = "Player shot computer. Computer blocked";
                     }
+                    else if (computerMove == Computer.state.shotgun)
+                    {
+                        result = "Computer shot Shotgun. Player is killed.";
+                        gameIsOver = true;
+                    }
                     break;
                 case state.shotgun:
                     if (computerMove == Computer.state.shotgun)
@@ -81,7 +100,7 @@ namespace Shotgun
                     }
                     else
                     {
-                        result = "Players shot Shotgun. Computer is in Heaven.";
+                        result = "Player shot Shotgun. Computer is in Heaven.";
                         gameIsOver = true;
                     }
                     break;
@@ -97,32 +116,9 @@ namespace Shotgun
             return result;
         }
 
-        public Shotgun()
-        {
-            playerMove = state.shotgun;
-            evaluateRound();
-        }
-
-
         public void Block()
         {
             playerMove = state.block;
-            evaluateRound();
-        }
-
-        public void Shoot()
-        {
-            if (HasAmmunition())
-            {
-                playerMove = state.shoot;
-                evaluateRound();
-            } 
-        }
-
-        public void Load()
-        {
-            playerMove = state.load;
-            amountShots = amountShots + 1;
             evaluateRound();
         }
 
@@ -138,6 +134,41 @@ namespace Shotgun
             }
         }
 
+        public void Shoot()
+        {
+            if (HasAmmunition())
+            {
+                playerMove = state.shoot;
+                amountShots = amountShots - 1;
+                evaluateRound();
+            } 
+        }
+
+        public void Load()
+        {
+            playerMove = state.load;
+            amountShots = amountShots + 1;
+            evaluateRound();
+        }
+
+        public int GetAmmunition()
+        {
+            return amountShots;
+        }
+
+        public int GetComputerAmmunition()
+        {
+            return computer.GetAmmunition();
+        }
+
+        public void shootShotgun()
+        {
+            playerMove = state.shotgun;
+            amountShots = amountShots -3;
+            evaluateRound();
+        }
+
+        /*
         public bool ShotgunActive()
         {
             if (amountShots >= 3)
@@ -149,7 +180,6 @@ namespace Shotgun
                 return false;
             }
         }
-
-
+        */
     }
 }
