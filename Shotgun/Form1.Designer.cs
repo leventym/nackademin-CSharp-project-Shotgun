@@ -31,133 +31,178 @@ namespace Shotgun
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelPlayerBullet = new System.Windows.Forms.Label();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.textBoxComputer = new System.Windows.Forms.TextBox();
+            this.buttonShoot = new System.Windows.Forms.Button();
+            this.buttonBlock = new System.Windows.Forms.Button();
+            this.labelComputer = new System.Windows.Forms.Label();
             this.textBoxMessage = new System.Windows.Forms.TextBox();
+            this.labelPlayer = new System.Windows.Forms.Label();
+            this.labelComputerbullet = new System.Windows.Forms.Label();
+            this.buttonShotgun = new System.Windows.Forms.Button();
+            this.pictureBoxGameOver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameOver)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(214, 291);
+            this.pictureBox1.Image = global::Shotgun.Properties.Resources.p8cin707g4z21_gif;
+            this.pictureBox1.Location = new System.Drawing.Point(103, 238);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(332, 323);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(949, 291);
+            this.pictureBox2.Image = global::Shotgun.Properties.Resources.istockphoto_1145833191_612x612;
+            this.pictureBox2.Location = new System.Drawing.Point(1040, 238);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(332, 323);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // labelPlayerBullet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Antal skott";
+            this.labelPlayerBullet.AutoSize = true;
+            this.labelPlayerBullet.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPlayerBullet.Location = new System.Drawing.Point(103, 155);
+            this.labelPlayerBullet.Name = "labelPlayerBullet";
+            this.labelPlayerBullet.Size = new System.Drawing.Size(195, 38);
+            this.labelPlayerBullet.TabIndex = 2;
+            this.labelPlayerBullet.Text = "Player bullet";
             // 
-            // label2
+            // buttonLoad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(949, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.buttonLoad.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLoad.Location = new System.Drawing.Point(23, 627);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(150, 46);
+            this.buttonLoad.TabIndex = 4;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // textBoxComputer
             // 
-            this.button1.Location = new System.Drawing.Point(46, 490);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 46);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBoxComputer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxComputer.Font = new System.Drawing.Font("Georgia", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxComputer.Location = new System.Drawing.Point(1013, 627);
+            this.textBoxComputer.Multiline = true;
+            this.textBoxComputer.Name = "textBoxComputer";
+            this.textBoxComputer.Size = new System.Drawing.Size(415, 68);
+            this.textBoxComputer.TabIndex = 5;
             // 
-            // textBox1
+            // buttonShoot
             // 
-            this.textBox1.Location = new System.Drawing.Point(949, 490);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 39);
-            this.textBox1.TabIndex = 5;
+            this.buttonShoot.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonShoot.Location = new System.Drawing.Point(209, 627);
+            this.buttonShoot.Name = "buttonShoot";
+            this.buttonShoot.Size = new System.Drawing.Size(150, 46);
+            this.buttonShoot.TabIndex = 6;
+            this.buttonShoot.Text = "Shoot";
+            this.buttonShoot.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonBlock
             // 
-            this.button2.Location = new System.Drawing.Point(269, 490);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 46);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonBlock.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonBlock.Location = new System.Drawing.Point(397, 627);
+            this.buttonBlock.Name = "buttonBlock";
+            this.buttonBlock.Size = new System.Drawing.Size(150, 46);
+            this.buttonBlock.TabIndex = 7;
+            this.buttonBlock.Text = "Block";
+            this.buttonBlock.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // labelComputer
             // 
-            this.button3.Location = new System.Drawing.Point(480, 490);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 46);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(113, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 32);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(921, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 32);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Dator";
+            this.labelComputer.AutoSize = true;
+            this.labelComputer.Font = new System.Drawing.Font("Georgia", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelComputer.Location = new System.Drawing.Point(1040, 50);
+            this.labelComputer.Name = "labelComputer";
+            this.labelComputer.Size = new System.Drawing.Size(211, 43);
+            this.labelComputer.TabIndex = 9;
+            this.labelComputer.Text = "Computer";
             // 
             // textBoxMessage
             // 
-            this.textBoxMessage.Location = new System.Drawing.Point(347, 670);
+            this.textBoxMessage.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxMessage.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxMessage.Location = new System.Drawing.Point(397, 814);
             this.textBoxMessage.Multiline = true;
             this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(623, 78);
+            this.textBoxMessage.Size = new System.Drawing.Size(747, 167);
             this.textBoxMessage.TabIndex = 10;
+            // 
+            // labelPlayer
+            // 
+            this.labelPlayer.AutoSize = true;
+            this.labelPlayer.Font = new System.Drawing.Font("Georgia", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPlayer.Location = new System.Drawing.Point(103, 50);
+            this.labelPlayer.Name = "labelPlayer";
+            this.labelPlayer.Size = new System.Drawing.Size(141, 43);
+            this.labelPlayer.TabIndex = 11;
+            this.labelPlayer.Text = "Player";
+            // 
+            // labelComputerbullet
+            // 
+            this.labelComputerbullet.AutoSize = true;
+            this.labelComputerbullet.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelComputerbullet.Location = new System.Drawing.Point(1040, 155);
+            this.labelComputerbullet.Name = "labelComputerbullet";
+            this.labelComputerbullet.Size = new System.Drawing.Size(248, 38);
+            this.labelComputerbullet.TabIndex = 12;
+            this.labelComputerbullet.Text = "Computer bullet";
+            // 
+            // buttonShotgun
+            // 
+            this.buttonShotgun.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonShotgun.Location = new System.Drawing.Point(209, 725);
+            this.buttonShotgun.Name = "buttonShotgun";
+            this.buttonShotgun.Size = new System.Drawing.Size(150, 46);
+            this.buttonShotgun.TabIndex = 13;
+            this.buttonShotgun.Text = "Shotgun";
+            this.buttonShotgun.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxGameOver
+            // 
+            this.pictureBoxGameOver.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBoxGameOver.Image = global::Shotgun.Properties.Resources._40908104_explosion_game_over_message_pixel_art_style_retro_vector_illustration;
+            this.pictureBoxGameOver.Location = new System.Drawing.Point(612, 303);
+            this.pictureBoxGameOver.Name = "pictureBoxGameOver";
+            this.pictureBoxGameOver.Size = new System.Drawing.Size(276, 194);
+            this.pictureBoxGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxGameOver.TabIndex = 14;
+            this.pictureBoxGameOver.TabStop = false;
+            this.pictureBoxGameOver.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 851);
+            this.ClientSize = new System.Drawing.Size(1512, 1076);
+            this.Controls.Add(this.pictureBoxGameOver);
+            this.Controls.Add(this.buttonShotgun);
+            this.Controls.Add(this.labelComputerbullet);
+            this.Controls.Add(this.labelPlayer);
             this.Controls.Add(this.textBoxMessage);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelComputer);
+            this.Controls.Add(this.buttonBlock);
+            this.Controls.Add(this.buttonShoot);
+            this.Controls.Add(this.textBoxComputer);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.labelPlayerBullet);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameOver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,15 +212,17 @@ namespace Shotgun
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelPlayerBullet;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.TextBox textBoxComputer;
+        private System.Windows.Forms.Button buttonShoot;
+        private System.Windows.Forms.Button buttonBlock;
+        private System.Windows.Forms.Label labelComputer;
         private System.Windows.Forms.TextBox textBoxMessage;
+        private System.Windows.Forms.Label labelPlayer;
+        private System.Windows.Forms.Label labelComputerbullet;
+        private System.Windows.Forms.Button buttonShotgun;
+        private System.Windows.Forms.PictureBox pictureBoxGameOver;
     }
 }
 

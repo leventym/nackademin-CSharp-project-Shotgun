@@ -21,10 +21,12 @@ namespace Shotgun
             startgame.Load();
             textBoxMessage.Text = startgame.GetResult();
             startgame.Shoot();
-            textBox1.Text = startgame.GetResult();
+            textBoxComputer.Text = startgame.GetResult();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
