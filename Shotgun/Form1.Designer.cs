@@ -33,7 +33,6 @@ namespace Shotgun
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelPlayerBullet = new System.Windows.Forms.Label();
             this.buttonLoad = new System.Windows.Forms.Button();
-            this.textBoxComputer = new System.Windows.Forms.TextBox();
             this.buttonShoot = new System.Windows.Forms.Button();
             this.buttonBlock = new System.Windows.Forms.Button();
             this.labelComputer = new System.Windows.Forms.Label();
@@ -88,16 +87,6 @@ namespace Shotgun
             this.buttonLoad.Text = "Load";
             this.buttonLoad.UseVisualStyleBackColor = true;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
-            // 
-            // textBoxComputer
-            // 
-            this.textBoxComputer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBoxComputer.Font = new System.Drawing.Font("Georgia", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxComputer.Location = new System.Drawing.Point(1013, 627);
-            this.textBoxComputer.Multiline = true;
-            this.textBoxComputer.Name = "textBoxComputer";
-            this.textBoxComputer.Size = new System.Drawing.Size(415, 68);
-            this.textBoxComputer.TabIndex = 5;
             // 
             // buttonShoot
             // 
@@ -210,13 +199,12 @@ namespace Shotgun
             this.Controls.Add(this.labelComputer);
             this.Controls.Add(this.buttonBlock);
             this.Controls.Add(this.buttonShoot);
-            this.Controls.Add(this.textBoxComputer);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.labelPlayerBullet);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Shotgun";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameOver)).EndInit();
@@ -231,7 +219,6 @@ namespace Shotgun
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelPlayerBullet;
         private System.Windows.Forms.Button buttonLoad;
-        private System.Windows.Forms.TextBox textBoxComputer;
         private System.Windows.Forms.Button buttonShoot;
         private System.Windows.Forms.Button buttonBlock;
         private System.Windows.Forms.Label labelComputer;
